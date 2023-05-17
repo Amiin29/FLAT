@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1684234299610' stop='1684234316804'>
+    <name>Signin</name>
+    <title>Signin</title>
+    <test-cases>
+        <test-case start='1684234299610' status='failed' stop='1684234306499'>
+            <name>Should visit the login page correctly</name>
+            <title>Should visit the login page correctly</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timed out retrying after 4000ms: expected 'https://ignite.mobelite-digital.info/sign-in' to include 'https://ignite.mobelite-digital.info/ '</message>
+                <stack-trace>AssertionError: Timed out retrying after 4000ms: expected 'https://ignite.mobelite-digital.info/sign-in' to include 'https://ignite.mobelite-digital.info/ '
+                    at Login.VerifyURL (webpack:///./cypress/PageObjects/Login/Login.js:18:17)
+                    at Context.eval (webpack:///./cypress/e2e/SignIn.cy.js:9:10)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

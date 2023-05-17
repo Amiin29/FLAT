@@ -1,0 +1,58 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1684234405331' stop='1684234405541'>
+    <name>Signin convert data to Json</name>
+    <title>Signin convert data to Json</title>
+    <test-cases>
+        <test-case start='1684234405331' status='broken' stop='1684234405523'>
+            <name>read data from excel</name>
+            <title>read data from excel</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>`cy.task('parseXlsx')` failed with the following error:
+                
+                > Cannot read properties of undefined (reading 'parse')
+                
+                https://on.cypress.io/api/task</message>
+                <stack-trace>CypressError: `cy.task('parseXlsx')` failed with the following error:
+                
+                > Cannot read properties of undefined (reading 'parse')
+                
+                https://on.cypress.io/api/task
+                    at &lt;unknown> (https://ignite.mobelite-digital.info/__cypress/runner/cypress_runner.js:146171:78)
+                    at tryCatcher (https://ignite.mobelite-digital.info/__cypress/runner/cypress_runner.js:11327:23)
+                    at Promise._settlePromiseFromHandler (https://ignite.mobelite-digital.info/__cypress/runner/cypress_runner.js:9262:31)
+                    at Promise._settlePromise (https://ignite.mobelite-digital.info/__cypress/runner/cypress_runner.js:9319:18)
+                    at Promise._settlePromise0 (https://ignite.mobelite-digital.info/__cypress/runner/cypress_runner.js:9364:10)
+                    at Promise._settlePromises (https://ignite.mobelite-digital.info/__cypress/runner/cypress_runner.js:9440:18)
+                    at _drainQueueStep (https://ignite.mobelite-digital.info/__cypress/runner/cypress_runner.js:6034:12)
+                    at _drainQueue (https://ignite.mobelite-digital.info/__cypress/runner/cypress_runner.js:6027:9)
+                    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://ignite.mobelite-digital.info/__cypress/runner/cypress_runner.js:6043:5)
+                    at Async.drainQueues (https://ignite.mobelite-digital.info/__cypress/runner/cypress_runner.js:5913:14)
+                From Your Spec Code:
+                    at Context.eval (webpack:///./cypress/support/commands.js:2:14)
+                
+                From Node.js Internals:
+                  TypeError: Cannot read properties of undefined (reading 'parse')
+                      at D:\2ème (ING\PFA\FLAT6LABS\Flat6Labs-1\cypress.config.js:18:37)
+                  at new Promise (&lt;anonymous>)
+                      at parseXlsx (D:\2ème ING\PFA\FLAT6LABS\Flat6Labs-1\cypress.config.js:16:18)
+                      at invoke (C:\Users\Asus\AppData\Local\Cypress\Cache\11.2.0\Cypress\resources\app\node_modules\@packages\server\lib\plugins\child\run_plugins.js:256:16)
+                      at &lt;unknown> (C:\Users\Asus\AppData\Local\Cypress\Cache\11.2.0\Cypress\resources\app\node_modules\@packages\server\lib\plugins\util.js:59:14)
+                      at tryCatcher (C:\Users\Asus\AppData\Local\Cypress\Cache\11.2.0\Cypress\resources\app\node_modules\bluebird\js\release\util.js:16:23)
+                      at Promise.attempt.Promise.try (C:\Users\Asus\AppData\Local\Cypress\Cache\11.2.0\Cypress\resources\app\node_modules\bluebird\js\release\method.js:39:29)
+                      at Object.wrapChildPromise (C:\Users\Asus\AppData\Local\Cypress\Cache\11.2.0\Cypress\resources\app\node_modules\@packages\server\lib\plugins\util.js:58:23)
+                      at RunPlugins.taskExecute (C:\Users\Asus\AppData\Local\Cypress\Cache\11.2.0\Cypress\resources\app\node_modules\@packages\server\lib\plugins\child\run_plugins.js:262:10)
+                      at RunPlugins.execute (C:\Users\Asus\AppData\Local\Cypress\Cache\11.2.0\Cypress\resources\app\node_modules\@packages\server\lib\plugins\child\run_plugins.js:182:21)
+                      at EventEmitter.&lt;anonymous> (C:\Users\Asus\AppData\Local\Cypress\Cache\11.2.0\Cypress\resources\app\node_modules\@packages\server\lib\plugins\child\run_plugins.js:279:12)
+                      at EventEmitter.emit (node:events:513:28)
+                      at process.&lt;anonymous> (C:\Users\Asus\AppData\Local\Cypress\Cache\11.2.0\Cypress\resources\app\node_modules\@packages\server\lib\plugins\util.js:33:22)
+                      at process.emit (node:events:513:28)
+                      at emit (node:internal/child_process:937:14)
+                      at process.processTicksAndRejections (node:internal/process/task_queues:83:21)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -5,7 +5,7 @@ const xlsx = require('node-xlsx').default; // calling xlsx plugin explicitly
 const fs = require('fs');  // for file
 const path = require('path');  // for file path
 module.exports =  defineConfig({
-  projectId: 'yf5fiq', //  Ancien project id : irft2c
+  projectId: 'bzry7g', //  Ancien project id : irft2c
 // ***********************************************
   e2e: {
   specPattern :'cypress/e2e/AllSpecPattern.cy.js',

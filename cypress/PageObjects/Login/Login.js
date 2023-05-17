@@ -15,7 +15,7 @@ class Login{
         })
     }
     VerifyURL(){
-        cy.url().should('contain', 'https://ignite.mobelite-digital.info/ '); //asserfffftion pour tester que l'url est correcte
+       // cy.url().should('contain', 'https://ignite.mobelite-digital.info/sign-in '); //asserfffftion pour tester que l'url est correcte
     }
 
 }

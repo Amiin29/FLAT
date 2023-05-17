@@ -1,0 +1,45 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1684313880865' stop='1684313890989'>
+    <name>Sign Up to FLAT6LABS</name>
+    <title>Sign Up to FLAT6LABS</title>
+    <test-cases>
+        <test-case start='1684313880865' status='passed' stop='1684313884447'>
+            <name>Should visit the login page correctly</name>
+            <title>Should visit the login page correctly</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1684313884451' status='passed' stop='1684313886564'>
+            <name>Fill the forms : StartupName , FirstName , LasteName , Email , Password , ConfirmPassword</name>
+            <title>Fill the forms : StartupName , FirstName , LasteName , Email , Password , ConfirmPassword</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1684313886585' status='passed' stop='1684313886685'>
+            <name>Click on button SignUp</name>
+            <title>Click on button SignUp</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1684313886689' status='failed' stop='1684313890941'>
+            <name>Verify Error Message </name>
+            <title>Verify Error Message </title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timed out retrying after 4000ms: expected '&lt;div.MuiAlert-message.muiltr-1w0ym84>' to have text 'Email already taken', but the text was 'Internal Server Error'</message>
+                <stack-trace>AssertionError: Timed out retrying after 4000ms: expected '&lt;div.MuiAlert-message.muiltr-1w0ym84>' to have text 'Email already taken', but the text was 'Internal Server Error'
+                    at SignUp.VerifyErrorMessage (webpack:///./cypress/PageObjects/SignUp/SignUpPage.js:38:51)
+                    at Context.eval (webpack:///./cypress/e2e/SignUp.cy.js:27:10)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

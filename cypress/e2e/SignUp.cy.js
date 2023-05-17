@@ -1,16 +1,16 @@
 //import SignUp from "../PageObjects/SignUpPage"
 import config from "../config/config.js"
-
+import SignUp from "../PageObjects/SignUp/SignUpPage.js"
 describe('Sign Up to FLAT6LABS', () => {
-  //const signU=new SignUp();
+  const signU=new SignUp();
   const conf = new config()
 
   it('Should visit the login page correctly', () => {
     cy.visit(conf.GetURL());
-   // cy.url().should('contain', 'https://ignite.mobelite-digital.info/ '); //---------------Assertion pour tester que l'url est correcte
+   //cy.url().should('contain', 'https://ignite.mobelite-digital.info/sign-in '); //---------------Assertion pour tester que l'url est correcte
     cy.get('.text-center').click();
   })
-  /*it('Fill the forms : StartupName , FirstName , LasteName , Email , Password , ConfirmPassword', () => {
+  it('Fill the forms : StartupName , FirstName , LasteName , Email , Password , ConfirmPassword', () => {
       cy.fixture('SignUpData').then((data)=>{
         signU.SetStartupName(data.SratupName);
         signU.SetFirstName(data.FirstName);
@@ -25,5 +25,5 @@ describe('Sign Up to FLAT6LABS', () => {
   })
   it('Verify Error Message ', () => {
     signU.VerifyErrorMessage();//----------------------------------Email already taken
-  })*/
+  })
 })

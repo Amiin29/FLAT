@@ -19,9 +19,9 @@ describe('Login', () => {
     login.VerifyURL()
   })
   it('Login as incubator', () => {
-    cy.fixture('SignInData').then((SignInData)=>{
-      login.setEmail(SignInData.Email_Incubator);
-      login.setPassword(SignInData.Password_Incubator);
+    cy.fixture('SignIn_Incubator').then((SignIn_Incubator)=>{
+      login.setEmail(SignIn_Incubator.Email_Incubator);
+      login.setPassword(SignIn_Incubator.Password_Incubator);
       login.ClickOnSubmit();
     })
   })
@@ -69,11 +69,11 @@ describe('Login', () => {
   })
   it('Login as Incubator', () => {
     cy.wait(1000);
-    cy.fixture('SignInData').then((SignInData)=>{
+    cy.fixture('SignIn_Incubator').then((SignIn_Incubator)=>{
       cy.wait(8000)
-      login.setEmail(SignInData.Email_Incubator);
-      login.setPassword(SignInData.Password_Incubator);
-      login.ClickOnSubmit();
+        login.setEmail(SignIn_Incubator.Email_Incubator);
+        login.setPassword(SignIn_Incubator.Password_Incubator);
+        login.ClickOnSubmit();
     })
     cy.wait(500);
   }) 

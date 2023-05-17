@@ -21,18 +21,7 @@ describe('Login', () => {
     it('Should visit the login page correctly', () => {
       cy.visit(conf.GetURL());
     })
-      describe('convert data to Json', () => 
-        { 
-          it('read data from excel', () =>{ 
-              cy.parseXlsx('cypress/fixtures/Flat6Labs.xlsx').then( (jsonData) =>{ 
-                  for (let i=0;i<=Cypress.$(jsonData[0]).length;i++){
-                      if (jsonData[i].name ==="Incubator"){
-                          cy.writeFile("cypress/fixtures/SignIn_Incubator.json", {Email_Incubator:jsonData[i].data[0][0], Password_Incubator:jsonData[i].data[0][1]})
-                        }
-                    }
-                })
-            })
-        })
+     
     describe("Reading Data from newly created json file",function(){
       it("login as Incubator ", function(){
         cy.fixture('SignIn_Incubator').then((SignIn_Incubator)=>{
@@ -66,17 +55,7 @@ describe('Login', () => {
     it('Log Out from the website ', () => {
       logout.LogOut()
     })
-    describe('convert data to Json', () => { 
-      it('read data from excel', () =>{ 
-          cy.parseXlsx('cypress/fixtures/Flat6Labs.xlsx').then( (jsonData) =>{ 
-              for (let i=0;i<=Cypress.$(jsonData[0]).length;i++){
-                  if (jsonData[i].name ==="Admin"){
-                      cy.writeFile("cypress/fixtures/SignIn_Admin.json", {Email_Admin:jsonData[i].data[0][0], Password_Admin:jsonData[i].data[0][1]})
-                    }
-                }
-            })
-        })
-    })
+
     describe("Reading Data from newly created json file",function(){
     it("login as Admin ", function(){
       cy.fixture('SignIn_Admin').then((SignIn_Admin)=>{

@@ -1,6 +1,6 @@
 class Application{
     CheckURL(){
-        cy.url().should('contain', 'https://ignite.mobelite-digital.info/ '); //---------------Assertion pour tester que l'url est correcte
+        cy.url().should('contain', 'https://ignite.mobelite-digital.info/sign-in '); //---------------Assertion pour tester que l'url est correcte
     }
     Check(){
         cy.fixture('AddNewProgramData').then((AddNewProgramData)=>{

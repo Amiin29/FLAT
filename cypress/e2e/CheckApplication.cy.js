@@ -18,22 +18,7 @@ describe('Sign Up to FLAT6LABS', () => {
       cy.visit(conf.GetURL());
       application.CheckURL()
     })
-    describe('convert data to Json', () => 
-    { 
-      it('read data from excel', () =>{ 
-          cy.parseXlsx('cypress/fixtures/Flat6Labs.xlsx').then( (jsonData) =>{ 
-            console.log(jsonData[3])
-
-              for (let i=0;i<=Cypress.$(jsonData[0]).length;i++){
-
-                  if (jsonData[i].name ==="Startup"){
-                    console.log(jsonData[i].name)
-                      cy.writeFile("cypress/fixtures/SignIn_Startup.json", {Email_Startup:jsonData[i].data[0][0], Password_Startup:jsonData[i].data[0][1]})
-                    }
-                }
-            })
-        })
-    })
+  
     describe("Reading Data from newly created json file",function(){
       it("login as Incubator ", function(){
         cy.fixture('SignIn_Startup').then((SignIn_Startup)=>{
@@ -79,18 +64,7 @@ describe('Sign Up to FLAT6LABS', () => {
     it('LogOut from the website', () => {
       logout.LogOut()
     })
-    describe('convert data to Json', () => 
-    { 
-      it('read data from excel', () =>{ 
-          cy.parseXlsx('cypress/fixtures/Flat6Labs.xlsx').then( (jsonData) =>{ 
-              for (let i=0;i<=Cypress.$(jsonData[0]).length;i++){
-                  if (jsonData[i].name ==="Incubator"){
-                      cy.writeFile("cypress/fixtures/SignIn_Incubator.json", {Email_Incubator:jsonData[i].data[0][0], Password_Incubator:jsonData[i].data[0][1]})
-                    }
-                }
-            })
-        })
-    })
+
 describe("Reading Data from newly created json file",function(){
   it("login as Incubator ", function(){
     cy.fixture('SignIn_Incubator').then((SignIn_Incubator)=>{

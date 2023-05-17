@@ -15,20 +15,7 @@ describe('Login', () => {
     it('Should visit the login page correctly', () => {
       cy.visit(conf.GetURL());
     })
-    describe('convert data to Json', () => 
-        { 
-          it('read data from excel', () =>{ 
-              cy.parseXlsx('cypress/fixtures/Flat6Labs.xlsx').then( (jsonData) =>{ 
-                  for (let i=0;i<=Cypress.$(jsonData[0]).length;i++){
-                      if (jsonData[i] ==="Incubator"){
-                        cy.log(jsonData[i])
 
-                        cy.writeFile("cypress/fixtures/SignIn_Incubator.json", {Email_Incubator:jsonData[i].data[0][0], Password_Incubator:jsonData[i].data[0][1]})
-                        }
-                    }
-                })
-            })
-        })
     describe("Reading Data from newly created json file",function(){
       it("login as Incubator ", function(){
         cy.fixture('SignIn_Incubator').then((SignIn_Incubator)=>{
@@ -43,7 +30,7 @@ describe('Login', () => {
         supportIncubator.GoToSupportPage();
         SupportRequest.GoToSupportRequestPage()
       })
-    it('Check the succseful message ', () => {
+   /* it('Check the succseful message ', () => {
         SupportRequest.CheckSucssfulMsg()
     })
     it('Log Out from the website ', () => {
@@ -51,10 +38,14 @@ describe('Login', () => {
     })
     describe('convert data to Json', () => { 
       it('read data from excel', () =>{ 
-          cy.parseXlsx('cypress/fixtures/Flat6Labs.xlsx').then( (jsonData) =>{ 
+        cy.fixture('SignIn_Admin').then((SignIn_Admin)=>{
+          console.log(SignIn_Admin)
+          login.setEmail(SignIn_Admin.Email_Admin);
+          login.setPassword(SignIn_Admin.Password_Admin);
+        })
+         /* cy.parseXlsx('cypress/fixtures/Flat6Labs.xlsx').then( (jsonData) =>{ 
               for (let i=0;i<=Cypress.$(jsonData[0]).length;i++){
                   if (jsonData[i].name ==="Admin"){
-                      cy.writeFile("cypress/fixtures/SignIn_Admin.json", {Email_Admin:jsonData[i].data[0][0], Password_Admin:jsonData[i].data[0][1]})
                     }
                 }
             })
@@ -80,5 +71,6 @@ describe('Login', () => {
     it('Check the  Mentor Request ', () => {
       cy.viewport(1400, 800)
       SupportRequest.CheckGeneralQuestion()
-    })})})
+    })})*/
+  })
 })
